@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader'
 import CommentDetail from './CommentDetail';
 import ApprovalCard from './ApprovalCard';
-import { EOPNOTSUPP } from 'constants';
 
 const App = () => {
     return (
