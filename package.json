@@ -29,7 +29,7 @@
     "chai-as-promised": "^6.0.0",
     "chai-http": "^3.0.0",
     "chai-things": "^0.2.0",
-    "chromedriver": "2.35.0",
+    "chromedriver": "2.44.0",
     "config": "^1.26.1",
     "cucumber": "2.3.1",
     "es6-promise": "^4.1.1",

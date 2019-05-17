@@ -3023,15 +3023,15 @@ chrome-trace-event@^1.0.0:
   dependencies:
     tslib "^1.9.0"
 
-chromedriver@2.35.0:
-  version "2.35.0"
-  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-2.35.0.tgz#c103ba2fb3d1671f666058159f5cbaa816902e4d"
+chromedriver@2.44.0:
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-2.44.0.tgz#aed1d136d0ae2d43be80c69ade756ca55ebf8fc3"
   dependencies:
     del "^3.0.0"
-    extract-zip "^1.6.5"
-    kew "^0.7.0"
+    extract-zip "^1.6.7"
     mkdirp "^0.5.1"
-    request "^2.83.0"
+    request "^2.88.0"
+    tcp-port-used "^1.0.1"
 
 chromedriver@^2.37.0:
   version "2.46.0"
