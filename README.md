@@ -134,7 +134,14 @@ To run the tests with Mobile Safari on iOS Simulator, follow these steps:
    bin/appium.sh
    ```
 
-8. Run the tests with Mobile Safari:
+8. If the problem with appium global install:
+    Check and `mkdir` required folders in `/usr/local/share/.config/yarn/global/node_modules/appium-xcuitest-driver/WebDriverAgent`
+    Then retry to run again 
+   ```sh
+   ./Scripts/bootstrap.sh -d (from above same folder)
+   ```
+
+9. Run the tests with Mobile Safari:
    ```sh
    docker-compose run --rm wdio mobile-safari
    ```
@@ -163,13 +170,17 @@ To run the tests with Mobile Chrome on Android Simulator, follow these steps:
 1. Download [Android Studio](https://developer.android.com/studio/) and on first
    start, follow the instructions to install the Android SDK and Emulator.
 
-2. Add the following lines to your `~/.profile` to make the JDK included in
+2. Add the following lines to adb shell working and to your `~/.profile` to make the JDK included in
    Android Studio and the installed Android SDK available to
    [Appium](https://appium.io/):
    ```sh
    export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'
    export PATH="$JAVA_HOME/bin:$PATH"
    export ANDROID_HOME=~/Library/Android/sdk
+
+   touch ~/.bash_profile
+   echo 'export PATH=$PATH:~/Library/Android/sdk/platform-tools/' >> ~/.bash_profile
+   source ~/.bash_profile
    ```
 
 3. Install [Node.JS](https://nodejs.org/) via [Homebrew](https://brew.sh/):
@@ -185,7 +196,8 @@ To run the tests with Mobile Chrome on Android Simulator, follow these steps:
 
 5. Install [Appium](https://appium.io/) as global NPM package:
    ```sh
-   npm install -g appium [--chromedriver_version=VERSION]
+   npm install -g appium [--chromedriver_version in package.json "chromedriver": "2.44.0", compare with android emulation virtual device `chrome` installed]
+   
    ```
    Make sure to configure `appium` with a
    [Chromedriver](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md)
