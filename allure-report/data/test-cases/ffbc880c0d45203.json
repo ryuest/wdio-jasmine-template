@@ -1,0 +1,214 @@
+{
+  "uid" : "ffbc880c0d45203",
+  "name" : "I introduce my search keywords for an user in the search box",
+  "fullName" : "GitHub user search can search using my keywords.I introduce my search keywords for an user in the search box",
+  "historyId" : "fc5acb493bde6affb7fc133e2dbd8076",
+  "time" : {
+    "start" : 1560266150724,
+    "stop" : 1560266152132,
+    "duration" : 1408
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/8eb39a99d7f4d742c4b0294828dc025c/elements",
+      "time" : {
+        "start" : 1560266150725,
+        "stop" : 1560266150735,
+        "duration" : 10
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "17f689be0f1e603a",
+        "name" : "Request",
+        "source" : "17f689be0f1e603a.json",
+        "type" : "application/json",
+        "size" : 56
+      }, {
+        "uid" : "a7c0a1dd9aad8ca7",
+        "name" : "Response",
+        "source" : "a7c0a1dd9aad8ca7.json",
+        "type" : "application/json",
+        "size" : 161
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/8eb39a99d7f4d742c4b0294828dc025c/element/0.10282568559060823-1/clear",
+      "time" : {
+        "start" : 1560266150736,
+        "stop" : 1560266150766,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "510ddfd19e1eb28",
+        "name" : "Response",
+        "source" : "510ddfd19e1eb28.json",
+        "type" : "application/json",
+        "size" : 91
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/8eb39a99d7f4d742c4b0294828dc025c/element/0.10282568559060823-1/value",
+      "time" : {
+        "start" : 1560266150766,
+        "stop" : 1560266151793,
+        "duration" : 1027
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "1e260fe548cc2f4e",
+        "name" : "Request",
+        "source" : "1e260fe548cc2f4e.json",
+        "type" : "application/json",
+        "size" : 209
+      }, {
+        "uid" : "52133b89dbc7be2b",
+        "name" : "Response",
+        "source" : "52133b89dbc7be2b.json",
+        "type" : "application/json",
+        "size" : 91
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/8eb39a99d7f4d742c4b0294828dc025c/screenshot",
+      "time" : {
+        "start" : 1560266151797,
+        "stop" : 0,
+        "duration" : -1560266151797
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "304fb1dd4ed2662a",
+        "name" : "Screenshot",
+        "source" : "304fb1dd4ed2662a.png",
+        "type" : "image/png",
+        "size" : 140669
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 6,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "GitHub user search"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "story",
+    "value" : "can search using my keywords"
+  }, {
+    "name" : "suite",
+    "value" : "GitHub user search can search using my keywords"
+  }, {
+    "name" : "testClass",
+    "value" : "GitHub user search can search using my keywords"
+  }, {
+    "name" : "testMethod",
+    "value" : "I introduce my search keywords for an user in the search box"
+  }, {
+    "name" : "package",
+    "value" : "GitHub user search can search using my keywords"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b0dca5e538a62fd2",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1560265966344,
+        "stop" : 1560265966344,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "9a54ce603586f653",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1560265885588,
+        "stop" : 1560265885588,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "3cef0d699cb5a7fb",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1560265791326,
+        "stop" : 1560265791326,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "d92a63ff53d401a1",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1560265727461,
+        "stop" : 1560265727461,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "b446a82caf936837",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1560265516338,
+        "stop" : 1560265516338,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "c9975b1fa013287f",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1560265379988,
+        "stop" : 1560265379989,
+        "duration" : 1
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ffbc880c0d45203.json",
+  "parameterValues" : [ "chrome" ]
+}

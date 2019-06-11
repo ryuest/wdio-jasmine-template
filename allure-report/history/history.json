@@ -1,0 +1,117 @@
+{
+  "9813a265b85f8c8538c2bbaf6f5fb9fd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "8c51fd091db50ecd",
+      "status" : "broken",
+      "statusDetails" : "An element could not be located on the page using the given search parameters.",
+      "time" : {
+        "start" : 1560265576264,
+        "stop" : 1560265607926,
+        "duration" : 31662
+      }
+    } ]
+  },
+  "fc5acb493bde6affb7fc133e2dbd8076" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ffbc880c0d45203",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560266150724,
+        "stop" : 1560266152132,
+        "duration" : 1408
+      }
+    } ]
+  },
+  "838b137aba82895f2e4c75162b2d388d" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "afa72db6ac7515f0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560266152652,
+        "stop" : 1560266153011,
+        "duration" : 359
+      }
+    } ]
+  },
+  "4d1969a7f473eb3b72e82c5a70599eb7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "87456400c208de71",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560265562301,
+        "stop" : 1560265574367,
+        "duration" : 12066
+      }
+    } ]
+  },
+  "ad9d0ba7763546c4d5cc160917f376d3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f5bfac8528ece5e4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560266125060,
+        "stop" : 1560266150724,
+        "duration" : 25664
+      }
+    } ]
+  },
+  "d5ca5f605834fb7a328182727bbb20b3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "75b7f62905ef7375",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560266152132,
+        "stop" : 1560266152652,
+        "duration" : 520
+      }
+    } ]
+  }
+}

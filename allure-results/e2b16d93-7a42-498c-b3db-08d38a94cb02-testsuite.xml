@@ -1,0 +1,92 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1560265359974' stop='1560265379990'>
+    <name>GitHub user search can search using my keywords</name>
+    <title>GitHub user search can search using my keywords</title>
+    <test-cases>
+        <test-case start='1560265359975' status='broken' stop='1560265379988'>
+            <name>the search GitHub page loaded</name>
+            <title>the search GitHub page loaded</title>
+            <labels>
+                <label name='feature' value='GitHub user search'/>
+                <label name='story' value='can search using my keywords'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"maxInstances":5,"browserName":"chrome","chromeOptions":{"args":["--window-size=1920,1080"]}}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/Users/jboiko/git3/react-webpack-babel-template/test/features/user-search/main.feature"]'/>
+            </parameters>
+            <steps>
+                <step start='1560265359981' status='broken' stop='1560265379988'>
+                    <name>POST /session/2ef9ce4ffe7bc7cdbe5d7afdd050c60d/url</name>
+                    <title>POST /session/2ef9ce4ffe7bc7cdbe5d7afdd050c60d/url</title>
+                    <attachments>
+                        <attachment title='Request' source='8720dd39-b264-4038-85f9-40be92957451-attachment.json' type='application/json' size='42'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>function timed out, ensure the promise resolves within 20000 milliseconds</message>
+                <stack-trace>Error: function timed out, ensure the promise resolves within 20000 milliseconds
+                    at Timeout._onTimeout (/Users/jboiko/git3/react-webpack-babel-template/node_modules/cucumber/lib/user_code_runner.js:93:22)
+                    at ontimeout (timers.js:498:11)
+                    at tryOnTimeout (timers.js:323:5)
+                    at Timer.listOnTimeout (timers.js:290:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1560265379988' status='pending' stop='1560265379989'>
+            <name>I introduce my search keywords for an user in the search box</name>
+            <title>I introduce my search keywords for an user in the search box</title>
+            <labels>
+                <label name='feature' value='GitHub user search'/>
+                <label name='story' value='can search using my keywords'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"maxInstances":5,"browserName":"chrome","chromeOptions":{"args":["--window-size=1920,1080"]}}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/Users/jboiko/git3/react-webpack-babel-template/test/features/user-search/main.feature"]'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1560265379989' status='pending' stop='1560265379989'>
+            <name>I press enter in the search box</name>
+            <title>I press enter in the search box</title>
+            <labels>
+                <label name='feature' value='GitHub user search'/>
+                <label name='story' value='can search using my keywords'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"maxInstances":5,"browserName":"chrome","chromeOptions":{"args":["--window-size=1920,1080"]}}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/Users/jboiko/git3/react-webpack-babel-template/test/features/user-search/main.feature"]'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1560265379989' status='pending' stop='1560265379989'>
+            <name>I should obtain a list of repositories for that user</name>
+            <title>I should obtain a list of repositories for that user</title>
+            <labels>
+                <label name='feature' value='GitHub user search'/>
+                <label name='story' value='can search using my keywords'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"maxInstances":5,"browserName":"chrome","chromeOptions":{"args":["--window-size=1920,1080"]}}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/Users/jboiko/git3/react-webpack-babel-template/test/features/user-search/main.feature"]'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

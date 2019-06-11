@@ -1,0 +1,218 @@
+{
+  "uid" : "733870d283bd0f52",
+  "name" : "searches for WebdriverIO",
+  "fullName" : "Local Cards.searches for WebdriverIO",
+  "historyId" : "9813a265b85f8c8538c2bbaf6f5fb9fd",
+  "time" : {
+    "start" : 1560256270675,
+    "stop" : 1560256281390,
+    "duration" : 10715
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "An element could not be located on the page using the given search parameters.",
+  "statusTrace" : "Error: An element could not be located on the page using the given search parameters.\n                    at click(\"#search_button_homepage\") - at element(\"#search_button_homepage\") - click.js:12:17",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "An element could not be located on the page using the given search parameters.",
+    "statusTrace" : "Error: An element could not be located on the page using the given search parameters.\n                    at click(\"#search_button_homepage\") - at element(\"#search_button_homepage\") - click.js:12:17",
+    "steps" : [ {
+      "name" : "POST /session/7ff2c17014c3461bc0909511eee6145f/url",
+      "time" : {
+        "start" : 1560256270678,
+        "stop" : 1560256280710,
+        "duration" : 10032
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "a17fc1038de6940c",
+        "name" : "Request",
+        "source" : "a17fc1038de6940c.json",
+        "type" : "application/json",
+        "size" : 39
+      }, {
+        "uid" : "1fafa2aa5d6492ae",
+        "name" : "Response",
+        "source" : "1fafa2aa5d6492ae.json",
+        "type" : "application/json",
+        "size" : 91
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/7ff2c17014c3461bc0909511eee6145f/screenshot",
+      "time" : {
+        "start" : 1560256280715,
+        "stop" : 1560256281390,
+        "duration" : 675
+      },
+      "status" : "broken",
+      "statusMessage" : "Error: An element could not be located on the page using the given search parameters.\n                    at click(\"#search_button_homepage\") - at element(\"#search_button_homepage\") - click.js:12:17",
+      "steps" : [ {
+        "name" : "POST /session/7ff2c17014c3461bc0909511eee6145f/element",
+        "time" : {
+          "start" : 1560256281077,
+          "stop" : 1560256281081,
+          "duration" : 4
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "a57bf7cbcccd409a",
+          "name" : "Request",
+          "source" : "a57bf7cbcccd409a.json",
+          "type" : "application/json",
+          "size" : 54
+        }, {
+          "uid" : "4ea5490f5346b1e5",
+          "name" : "Response",
+          "source" : "4ea5490f5346b1e5.json",
+          "type" : "application/json",
+          "size" : 136
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "POST /session/7ff2c17014c3461bc0909511eee6145f/elements",
+        "time" : {
+          "start" : 1560256281084,
+          "stop" : 1560256281095,
+          "duration" : 11
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "2de4a3dc8abb7639",
+          "name" : "Request",
+          "source" : "2de4a3dc8abb7639.json",
+          "type" : "application/json",
+          "size" : 54
+        }, {
+          "uid" : "f2c154ef280ec7dc",
+          "name" : "Response",
+          "source" : "f2c154ef280ec7dc.json",
+          "type" : "application/json",
+          "size" : 361
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "POST /session/7ff2c17014c3461bc0909511eee6145f/element",
+        "time" : {
+          "start" : 1560256281098,
+          "stop" : 1560256281109,
+          "duration" : 11
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "c90dc48dbcc63270",
+          "name" : "Request",
+          "source" : "c90dc48dbcc63270.json",
+          "type" : "application/json",
+          "size" : 71
+        }, {
+          "uid" : "ddde8b231bed9808",
+          "name" : "Response",
+          "source" : "ddde8b231bed9808.json",
+          "type" : "application/json",
+          "size" : 628
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "GET /session/7ff2c17014c3461bc0909511eee6145f/screenshot",
+        "time" : {
+          "start" : 1560256281111,
+          "stop" : 1560256281390,
+          "duration" : 279
+        },
+        "status" : "broken",
+        "statusMessage" : "Error: An element could not be located on the page using the given search parameters.\n                    at click(\"#search_button_homepage\") - at element(\"#search_button_homepage\") - click.js:12:17",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "9b2f4256545c07af",
+          "name" : "Screenshot",
+          "source" : "9b2f4256545c07af.png",
+          "type" : "image/png",
+          "size" : 47197
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ {
+        "uid" : "2f3990c20f6cb971",
+        "name" : "Screenshot",
+        "source" : "2f3990c20f6cb971.png",
+        "type" : "image/png",
+        "size" : 47197
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 8,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 10,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "suite",
+    "value" : "Local Cards"
+  }, {
+    "name" : "testClass",
+    "value" : "Local Cards"
+  }, {
+    "name" : "testMethod",
+    "value" : "searches for WebdriverIO"
+  }, {
+    "name" : "package",
+    "value" : "Local Cards"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "733870d283bd0f52.json",
+  "parameterValues" : [ "chrome" ]
+}

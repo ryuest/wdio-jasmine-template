@@ -1,41 +1,26 @@
-FROM alpine:3.9
+FROM ubuntu:18.04
 
-RUN echo '@edgetesting http://dl-cdn.alpinelinux.org/alpine/edge/testing' \
-  >> /etc/apk/repositories
+# Install machine dependencies
+RUN apt update \
+  && apt install -y unzip curl wget git make build-essential g++ openjdk-8-jdk \
+  && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+  && apt update \
+  && apt-get install -y nodejs \
+  && echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | tee /etc/apt/sources.list.d/google-chrome.list \
+  && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+  && apt update \
+  && apt install -y google-chrome-stable firefox
 
-RUN apk --no-cache add \
-    nodejs \
-    npm \
-    ffmpeg \
-    android-tools@edgetesting \
-  && npm install -g \
-    npm@latest \
-    @wdio/cli@^5.7.15 \
-    @wdio/local-runner@^5.7.15 \
-    @wdio/mocha-framework@^5.7.14 \
-    @wdio/spec-reporter@^5.7.13 \
-    @wdio/sync@^5.7.13 \
-    chai@^4.2.0 \
-    mailhog@^4.1.0 \
-    uuid@^3.3.2 \
-    wdio-screen-commands@^2.6.0 \
-    webdriverio@^5.7.15 \
-  # Clean up obsolete files:
-  && rm -rf \
-    /tmp/* \
-    /root/.npm
+# Working directory
+RUN mkdir -p /workdir/output
+WORKDIR /workdir
 
-# Set NODE_PATH to be able to require globally installed packages:
-ENV NODE_PATH=/usr/lib/node_modules
+# Install dependencies if any change
+COPY package.json package-lock.json ./
+RUN npm install
 
-# Avoid permission issues with host mounts by assigning a user/group with
-# uid/gid 1000 (usually the ID of the first user account on GNU/Linux):
-RUN adduser -D -u 1000 wdio
+# Copy tests
+COPY . ./
 
-USER wdio
-
-WORKDIR /opt
-
-COPY bin/wait-for-hosts.sh /usr/local/bin/wait-for-hosts
-
-ENTRYPOINT ["wait-for-hosts", "--", "wdio"]
+# Execute tests
+ENTRYPOINT ["npm", "test"]

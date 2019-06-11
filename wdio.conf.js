@@ -36,11 +36,11 @@ exports.config = {
     bail: 0,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath: './errorShots/',
+    screenshotPath: './reports/',
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-    baseUrl: 'http://sports.williamhill.com/betting/en-gb',
+    baseUrl: 'https://github.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -50,11 +50,17 @@ exports.config = {
     path: '/',
 
     //  services: ['devtools', 'applitools', 'appium', 'chromedriver', 'docker'],
-    services: ['chromedriver'],
 
     framework: 'mocha',
 
-    //reporters: ['allure', 'html', 'json'],
+    reporters: ['allure'],
+
+     allure: {
+         outputDir: './allure-results/',
+         disableWebdriverStepsReporting: false,
+         useCucumberStepReporter: false,
+     },
+
 
     mochaOpts: {
         ui: 'bdd',

@@ -1,0 +1,81 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1560256270675' stop='1560256281390'>
+    <name>Local Cards</name>
+    <title>Local Cards</title>
+    <test-cases>
+        <test-case start='1560256270675' status='broken' stop='1560256281390'>
+            <name>searches for WebdriverIO</name>
+            <title>searches for WebdriverIO</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"maxInstances":5,"browserName":"chrome","chromeOptions":{"args":["--window-size=1920,1080"]}}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/Users/jboiko/git3/react-webpack-babel-template/test/specs/02-session.js"]'/>
+            </parameters>
+            <steps>
+                <step start='1560256270678' status='passed' stop='1560256280710'>
+                    <name>POST /session/7ff2c17014c3461bc0909511eee6145f/url</name>
+                    <title>POST /session/7ff2c17014c3461bc0909511eee6145f/url</title>
+                    <attachments>
+                        <attachment title='Request' source='7caa7caf-1d8d-4ad2-8ffa-48d90cb7b54e-attachment.json' type='application/json' size='39'/>
+                        <attachment title='Response' source='b616472a-cbb7-431e-84aa-9623fe2fef53-attachment.json' type='application/json' size='91'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1560256280715' status='broken' stop='1560256281390'>
+                    <name>GET /session/7ff2c17014c3461bc0909511eee6145f/screenshot</name>
+                    <title>GET /session/7ff2c17014c3461bc0909511eee6145f/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='c141601b-3537-4a6e-8895-cd2564534e8e-attachment.png' type='image/png' size='47197'/>
+                    </attachments>
+                    <steps>
+                        <step start='1560256281077' status='passed' stop='1560256281081'>
+                            <name>POST /session/7ff2c17014c3461bc0909511eee6145f/element</name>
+                            <title>POST /session/7ff2c17014c3461bc0909511eee6145f/element</title>
+                            <attachments>
+                                <attachment title='Request' source='7bc0ff84-945e-412d-803a-639031c5a87b-attachment.json' type='application/json' size='54'/>
+                                <attachment title='Response' source='54d5816d-449f-4c4a-8cd8-e6d04e5ca3d7-attachment.json' type='application/json' size='136'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                        <step start='1560256281084' status='passed' stop='1560256281095'>
+                            <name>POST /session/7ff2c17014c3461bc0909511eee6145f/elements</name>
+                            <title>POST /session/7ff2c17014c3461bc0909511eee6145f/elements</title>
+                            <attachments>
+                                <attachment title='Request' source='5135802b-803f-4118-b5dd-0a0485438554-attachment.json' type='application/json' size='54'/>
+                                <attachment title='Response' source='1f1d425d-4a47-4816-a68b-a94c83a722ff-attachment.json' type='application/json' size='361'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                        <step start='1560256281098' status='passed' stop='1560256281109'>
+                            <name>POST /session/7ff2c17014c3461bc0909511eee6145f/element</name>
+                            <title>POST /session/7ff2c17014c3461bc0909511eee6145f/element</title>
+                            <attachments>
+                                <attachment title='Request' source='586b2bd2-890a-495a-827a-84ecea2074fb-attachment.json' type='application/json' size='71'/>
+                                <attachment title='Response' source='088358ba-7073-448d-9ac9-ef14e4c27d30-attachment.json' type='application/json' size='628'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                        <step start='1560256281111' status='broken' stop='1560256281390'>
+                            <name>GET /session/7ff2c17014c3461bc0909511eee6145f/screenshot</name>
+                            <title>GET /session/7ff2c17014c3461bc0909511eee6145f/screenshot</title>
+                            <attachments>
+                                <attachment title='Screenshot' source='f73ebb6e-9ce8-4c4d-bb3f-915b9748fa15-attachment.png' type='image/png' size='47197'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>An element could not be located on the page using the given search parameters.</message>
+                <stack-trace>Error: An element could not be located on the page using the given search parameters.
+                    at click("#search_button_homepage") - at element("#search_button_homepage") - click.js:12:17</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

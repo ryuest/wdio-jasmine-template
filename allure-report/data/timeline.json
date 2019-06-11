@@ -1,0 +1,77 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "I should obtain a list of repositories for that user",
+    "uid" : "afa72db6ac7515f0",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560266152652,
+      "stop" : 1560266153011,
+      "duration" : 359
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "searches for WebdriverIO",
+    "uid" : "8c51fd091db50ecd",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "broken",
+    "time" : {
+      "start" : 1560265576264,
+      "stop" : 1560265607926,
+      "duration" : 31662
+    },
+    "flaky" : true,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "I press enter in the search box",
+    "uid" : "75b7f62905ef7375",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560266152132,
+      "stop" : 1560266152652,
+      "duration" : 520
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "searches for WebdriverIO",
+    "uid" : "87456400c208de71",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560265562301,
+      "stop" : 1560265574367,
+      "duration" : 12066
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "I introduce my search keywords for an user in the search box",
+    "uid" : "ffbc880c0d45203",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560266150724,
+      "stop" : 1560266152132,
+      "duration" : 1408
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "the search GitHub page loaded",
+    "uid" : "f5bfac8528ece5e4",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560266125060,
+      "stop" : 1560266150724,
+      "duration" : 25664
+    },
+    "flaky" : true,
+    "parameters" : [ "chrome" ]
+  } ]
+}
