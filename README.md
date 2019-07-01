@@ -24,12 +24,8 @@ and Microsoft Edge on Windows 10.
 
 - [Usage](#usage)
   * [Chrome](#chrome)
-  * [Firefox](#firefox)
-  * [Safari](#safari)
   * [Mobile Safari](#mobile-safari)
   * [Mobile Chrome](#mobile-chrome)
-  * [Internet Explorer](#internet-explorer)
-  * [Microsoft Edge](#microsoft-edge)
   * [Shutdown](#shutdown)
 
 ## Usage
@@ -47,53 +43,6 @@ Run the tests with Chrome:
 ```sh
 docker-compose run --rm wdio [chrome]
 ```
-
-Connect to Chrome via VNC:
-```sh
-open vnc://user:secret@localhost:5900
-```
-
-**Please Note:**  
-To be able to see Chrome running via VNC or screen recordings, disable headless
-mode in [chrome.js](chrome.js).
-
-### Firefox
-Run the tests with Firefox:
-```sh
-docker-compose run --rm wdio firefox
-```
-
-Connect to Firefox via VNC:
-```sh
-open vnc://user:secret@localhost:5901
-```
-
-### Safari
-To run the tests with Safari on MacOS, follow these steps:
-
-1. [Configure Safari to Enable WebDriver Support](https://developer.apple.com/documentation/webkit/testing_with_webdriver_in_safari#2957277).
-
-2. Download and install [MJPEG Server](https://github.com/blueimp/mjpeg-server)
-   as `mjpeg-server` in your `PATH` and install [FFmpeg](https://ffmpeg.org/)
-   via [Homebrew](https://brew.sh/):
-   ```sh
-   brew install ffmpeg
-   ```
-
-3. Add the `example` host to your `/etc/hosts` file:
-   ```sh
-   printf '127.0.0.1\t%s\n' example | sudo tee -a /etc/hosts
-   ```
-
-4. Start `safaridriver` and `mjpeg-server` with the provided helper script:
-   ```sh
-   bin/safaridriver.sh [screen index]
-   ```
-
-5. Run the tests with Safari:
-   ```sh
-   docker-compose run --rm wdio safari
-   ```
 
 ### Mobile Safari
 To run the tests with Mobile Safari on iOS Simulator, follow these steps:
@@ -122,11 +71,7 @@ To run the tests with Mobile Safari on iOS Simulator, follow these steps:
 5. Install [Appium](https://appium.io/) as global NPM package:
    ```sh
    npm install -g appium
-   ```
-
-6. Add the `example` host to your `/etc/hosts` file:
-   ```sh
-   printf '127.0.0.1\t%s\n' example | sudo tee -a /etc/hosts
+   npm install appium-doctor -g
    ```
 
 7. Start `appium` with the provided helper script:
@@ -178,8 +123,15 @@ To run the tests with Mobile Chrome on Android Simulator, follow these steps:
    export PATH="$JAVA_HOME/bin:$PATH"
    export ANDROID_HOME=~/Library/Android/sdk
 
+   OR
    touch ~/.bash_profile
-   echo 'export PATH=$PATH:~/Library/Android/sdk/platform-tools/' >> ~/.bash_profile
+   Add the following 4 lines to ~/.bash_profile.
+
+   export ANDROID_HOME=/Users/$USER/Library/Android/sdk/
+   export PATH=$PATH:$ANDROID_HOME
+   export PATH=$PATH:$ANDROID_HOME/tools
+   export PATH=$PATH:$ANDROID_HOME/platform-tools
+   Finally execute the below command (or RESTART the system to reflect the changes made).
    source ~/.bash_profile
    ```
 
@@ -213,14 +165,14 @@ To run the tests with Mobile Chrome on Android Simulator, follow these steps:
    bin/appium.sh
    ```
 
-7. Build Android Virtual Device with any build with root access, add to file `/Users/<<--USERXXX-->/Library/Android/sdk/system-images/<<--XXXX-->>/google_apis/x86/build.prop` new line:
+7. Build Android Virtual Device with any build with root access, add to file `/Users/<-USERNAME->/Library/Android/sdk/system-images/<-XXXX->/google_apis/x86/build.prop` new line:
    ```sh
    ro.debuggable=1
    ``` 
 
-8. Start the Android Virtual Device with a custom `/etc/hosts` file:
+8. Start the Android Virtual Device:
    ```sh
-   bin/android-emulator.sh -hosts etc/android.hosts
+   bin/android-emulator.sh
    ```  
 
 9. Run the tests with Mobile Chrome:
@@ -234,115 +186,6 @@ To run the tests with Mobile Chrome on Android Simulator, follow these steps:
    ORIENTATION=LANDSCAPE docker-compose run --rm wdio mobile-chrome
    ```
 
-### Internet Explorer
-**Please Note:**  
-This guide assumes that a system with Windows 10 has been set up, e.g. using the
-"MSEdge on Win10" virtual machine image (which also includes Internet Explorer)
-from
-[Microsoft's Free VMs](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
-site.
-
-To run the tests with Internet Explorer, follow these steps:
-
-1. Set "Change the size of text, apps, and other items" to 100% in Windows
-   Display Settings.  
-   If the option is grayed out, make sure the graphics configuration allows
-   changing the scaling setting (see e.g.
-   [Parallels article #123951](https://kb.parallels.com/en/123951)).
-
-2. Make sure the Internet Explorer `Zoom` level is set to `100%` so that
-   the native mouse events can be set to the correct coordinates.
-
-3. Create a `.env` file in the same directory as
-   [docker-compose.yml](docker-compose.yml)
-   and add the following environment variables:
-   ```sh
-   SERVER_HOST=<DOCKER_HOST_IP>
-   SERVER_PORT=8080
-   WINDOWS_HOST=<WINDOWS_HOST_IP>
-   WINDOWS_ASSETS_DIR=C:\Users\<USERNAME>\Desktop\assets\
-   ```
-   Make sure that the `DOCKER_HOST_IP` is accessible from the Windows machine
-   and the `WINDOWS_HOST_IP` is accessible from a Docker container (see also the
-   [FAQ](FAQ.md)).  
-   Also make sure that `WINDOWS_ASSETS_DIR` points to a valid folder path and
-   ends with a backslash.
-
-4. Edit the `example` host entry in [etc/windows.hosts](etc/windows.hosts) and
-   set its IP address to the `SERVER_HOST` IP defined in the `.env` file.
-
-5. Copy [bin/webdriver.ps1](bin/webdriver.ps1) and
-   [etc/windows.hosts](etc/windows.hosts) to the same folder in the Windows
-   machine (e.g. the Desktop).  
-   Also copy the files in the `assets` directory to the folder defined as
-   `WINDOWS_ASSETS_DIR`.
-
-6. Create a shortcut to `webdriver.ps1` (via "Right-Click" → "Create shortcut"),
-   then open the properties dialog for the shortcut (via "Right-Click" →
-   "Properties") and set the `Target` property to the following value:
-   ```bat
-   powershell -ExecutionPolicy ByPass -File webdriver.ps1
-   ```
-   Click "OK" to save the changes to the shortcut.
-
-7. Double-Click on the webdriver shortcut to setup and start the servers.  
-   Allow `nginx` and `MJPEGServer` to communicate on all networks in the Windows
-   Defender Firewall dialog.
-
-8. Run the tests with Internet Explorer:
-   ```sh
-   docker-compose run --rm wdio ie
-   ```
-
-### Microsoft Edge
-**Please Note:**  
-This guide assumes that a system with Windows 10 has been set up.  
-The scripted installation of
-[MicrosoftWebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
-also requires `17763` as minimum Windows build version.
-
-To run the tests with Microsoft Edge, follow these steps:
-
-1. Create a `.env` file in the same directory as
-   [docker-compose.yml](docker-compose.yml)
-   and add the following environment variables:
-   ```sh
-   SERVER_HOST=<DOCKER_HOST_IP>
-   SERVER_PORT=8080
-   WINDOWS_HOST=<WINDOWS_HOST_IP>
-   WINDOWS_ASSETS_DIR=C:\Users\<USERNAME>\Desktop\assets\
-   ```
-   Make sure that the `DOCKER_HOST_IP` is accessible from the Windows machine
-   and the `WINDOWS_HOST_IP` is accessible from a Docker container (see also the
-   [FAQ](FAQ.md)).  
-   Also make sure that `WINDOWS_ASSETS_DIR` points to a valid folder path and
-   ends with a backslash.
-
-2. Edit the `example` host entry in [etc/windows.hosts](etc/windows.hosts) and
-   set its IP address to the `SERVER_HOST` IP defined in the `.env` file.
-
-3. Copy [bin/webdriver.ps1](bin/webdriver.ps1) and
-   [etc/windows.hosts](etc/windows.hosts) to the same folder in the Windows
-   machine (e.g. the Desktop).  
-   Also copy the files in the `assets` directory to the folder defined as
-   `WINDOWS_ASSETS_DIR`.
-
-4. Create a shortcut to `webdriver.ps1` (via "Right-Click" → "Create shortcut"),
-   then open the properties dialog for the shortcut (via "Right-Click" →
-   "Properties") and set the `Target` property to the following value:
-   ```bat
-   powershell -ExecutionPolicy ByPass -File webdriver.ps1
-   ```
-   Click "OK" to save the changes to the shortcut.
-
-5. Double-Click on the webdriver shortcut to setup and start the servers.  
-   Allow `nginx` and `MJPEGServer` to communicate on all networks in the Windows
-   Defender Firewall dialog.
-
-6. Run the tests with Microsoft Edge:
-   ```sh
-   docker-compose run --rm wdio edge
-   ```
 
 ### Shutdown
 Stop and remove the container set:

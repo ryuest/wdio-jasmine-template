@@ -4,19 +4,47 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "An element could not be located on the page using the given search parameters.",
+      "name" : "unknown error: cannot determine loading status\n                from unknown error: cannot determine loading status\n                from disconnected: received Inspector.detached event",
       "children" : [ {
         "name" : "searches for WebdriverIO",
-        "uid" : "8c51fd091db50ecd",
-        "parentUid" : "d53bb646b3c97098681e1db1a25832ed",
+        "uid" : "19571f0f01616fa4",
+        "parentUid" : "adde3b83fe679a50028b8edf93b4e590",
         "status" : "broken",
         "time" : {
-          "start" : 1560265576264,
-          "stop" : 1560265607926,
-          "duration" : 31662
+          "start" : 1560858218187,
+          "stop" : 1560858220887,
+          "duration" : 2700
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "searches for WebdriverIO",
+        "uid" : "4bdc2e1c8bb7fa74",
+        "parentUid" : "adde3b83fe679a50028b8edf93b4e590",
+        "status" : "broken",
+        "time" : {
+          "start" : 1560858222818,
+          "stop" : 1560858223694,
+          "duration" : 876
         },
         "flaky" : true,
         "parameters" : [ "chrome" ]
+      } ],
+      "uid" : "adde3b83fe679a50028b8edf93b4e590"
+    }, {
+      "name" : "An element could not be located on the page using the given search parameters.",
+      "children" : [ {
+        "name" : "I press enter in the search box",
+        "uid" : "79cfdf58bf95e943",
+        "parentUid" : "d53bb646b3c97098681e1db1a25832ed",
+        "status" : "broken",
+        "time" : {
+          "start" : 1561024569283,
+          "stop" : 1561024569310,
+          "duration" : 27
+        },
+        "flaky" : true,
+        "parameters" : [ "safari" ]
       } ],
       "uid" : "d53bb646b3c97098681e1db1a25832ed"
     } ],

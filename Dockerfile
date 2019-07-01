@@ -9,7 +9,9 @@ RUN apt update \
   && echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | tee /etc/apt/sources.list.d/google-chrome.list \
   && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && apt update \
-  && apt install -y google-chrome-stable firefox
+  && apt install -y google-chrome-stable
+
+EXPOSE 80 
 
 # Working directory
 RUN mkdir -p /workdir/output
@@ -23,4 +25,4 @@ RUN npm install
 COPY . ./
 
 # Execute tests
-ENTRYPOINT ["npm", "test"]
+ENTRYPOINT ["npm", "start"]

@@ -5,13 +5,13 @@
     "name" : "DuckDuckGo search",
     "children" : [ {
       "name" : "searches for WebdriverIO",
-      "uid" : "87456400c208de71",
+      "uid" : "19571f0f01616fa4",
       "parentUid" : "43530001671f39758661d4a1fd0f32db",
-      "status" : "passed",
+      "status" : "broken",
       "time" : {
-        "start" : 1560265562301,
-        "stop" : 1560265574367,
-        "duration" : 12066
+        "start" : 1560858218187,
+        "stop" : 1560858220887,
+        "duration" : 2700
       },
       "flaky" : false,
       "parameters" : [ "chrome" ]
@@ -21,13 +21,13 @@
     "name" : "Local Cards",
     "children" : [ {
       "name" : "searches for WebdriverIO",
-      "uid" : "8c51fd091db50ecd",
+      "uid" : "4bdc2e1c8bb7fa74",
       "parentUid" : "6717782459a304db99d9fc2e51658f42",
       "status" : "broken",
       "time" : {
-        "start" : 1560265576264,
-        "stop" : 1560265607926,
-        "duration" : 31662
+        "start" : 1560858222818,
+        "stop" : 1560858223694,
+        "duration" : 876
       },
       "flaky" : true,
       "parameters" : [ "chrome" ]
@@ -37,52 +37,100 @@
     "name" : "GitHub user search can search using my keywords",
     "children" : [ {
       "name" : "the search GitHub page loaded",
-      "uid" : "f5bfac8528ece5e4",
+      "uid" : "e6d57555fba60de2",
       "parentUid" : "e048972123c268f6b799b6ca75601635",
       "status" : "passed",
       "time" : {
-        "start" : 1560266125060,
-        "stop" : 1560266150724,
-        "duration" : 25664
+        "start" : 1560864822608,
+        "stop" : 1560864824039,
+        "duration" : 1431
       },
       "flaky" : true,
       "parameters" : [ "chrome" ]
     }, {
       "name" : "I introduce my search keywords for an user in the search box",
-      "uid" : "ffbc880c0d45203",
+      "uid" : "423e184054a0981b",
       "parentUid" : "e048972123c268f6b799b6ca75601635",
       "status" : "passed",
       "time" : {
-        "start" : 1560266150724,
-        "stop" : 1560266152132,
-        "duration" : 1408
+        "start" : 1560864824039,
+        "stop" : 1560864825384,
+        "duration" : 1345
       },
-      "flaky" : false,
+      "flaky" : true,
       "parameters" : [ "chrome" ]
     }, {
       "name" : "I press enter in the search box",
-      "uid" : "75b7f62905ef7375",
+      "uid" : "6a80a16f80a5b6d1",
       "parentUid" : "e048972123c268f6b799b6ca75601635",
       "status" : "passed",
       "time" : {
-        "start" : 1560266152132,
-        "stop" : 1560266152652,
-        "duration" : 520
+        "start" : 1560864825384,
+        "stop" : 1560864825644,
+        "duration" : 260
       },
-      "flaky" : false,
+      "flaky" : true,
       "parameters" : [ "chrome" ]
     }, {
       "name" : "I should obtain a list of repositories for that user",
-      "uid" : "afa72db6ac7515f0",
+      "uid" : "c47a2aaab33dbe71",
       "parentUid" : "e048972123c268f6b799b6ca75601635",
       "status" : "passed",
       "time" : {
-        "start" : 1560266152652,
-        "stop" : 1560266153011,
-        "duration" : 359
+        "start" : 1560864825644,
+        "stop" : 1560864825832,
+        "duration" : 188
+      },
+      "flaky" : true,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "the search GitHub page loaded",
+      "uid" : "7d2a5954313f1972",
+      "parentUid" : "e048972123c268f6b799b6ca75601635",
+      "status" : "passed",
+      "time" : {
+        "start" : 1561024566395,
+        "stop" : 1561024568583,
+        "duration" : 2188
       },
       "flaky" : false,
-      "parameters" : [ "chrome" ]
+      "parameters" : [ "safari" ]
+    }, {
+      "name" : "I introduce my search keywords for an user in the search box",
+      "uid" : "34ae87a48e73f62",
+      "parentUid" : "e048972123c268f6b799b6ca75601635",
+      "status" : "passed",
+      "time" : {
+        "start" : 1561024568583,
+        "stop" : 1561024569283,
+        "duration" : 700
+      },
+      "flaky" : false,
+      "parameters" : [ "safari" ]
+    }, {
+      "name" : "I press enter in the search box",
+      "uid" : "79cfdf58bf95e943",
+      "parentUid" : "e048972123c268f6b799b6ca75601635",
+      "status" : "broken",
+      "time" : {
+        "start" : 1561024569283,
+        "stop" : 1561024569310,
+        "duration" : 27
+      },
+      "flaky" : true,
+      "parameters" : [ "safari" ]
+    }, {
+      "name" : "I should obtain a list of repositories for that user",
+      "uid" : "78be7c30ed8212a",
+      "parentUid" : "e048972123c268f6b799b6ca75601635",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1561024569310,
+        "stop" : 1561024569311,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "parameters" : [ "safari" ]
     } ],
     "uid" : "e048972123c268f6b799b6ca75601635"
   } ]

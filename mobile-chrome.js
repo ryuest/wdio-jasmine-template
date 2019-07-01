@@ -1,8 +1,7 @@
 const orientation = process.env.ORIENTATION || 'PORTRAIT' // LANDSCAPE|PORTRAIT
 
 exports.config = Object.assign({}, require('./chrome').config, {
-  // Docker for Mac host address:
-  hostname: 'host.docker.internal',
+  hostname: 'localhost',
   // Appium port:
   port: 4723,
   // Appium path:

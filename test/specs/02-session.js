@@ -1,11 +1,12 @@
 describe('Local Cards', () => {
   it('searches for WebdriverIO', () => {
-    browser.url('http://localhost:8080/')
-    browser.saveScreenshot('./reports/screenshotLocal.png');
+    browser.url('/')
+    browser.saveScreenshot('./reports/sessionTest2.png');
 
     var logout = browser.element('.green');
     logout.waitForExist(5000);
-    browser.click('#search_button_homepage');
+    console.log('FAILING ON PURPORSE to click not exist element: ' + logout)
+   browser.click('#search_button_homepage');
    
 
     const title = browser.getTitle()

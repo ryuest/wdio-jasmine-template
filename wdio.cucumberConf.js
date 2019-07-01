@@ -53,6 +53,13 @@ exports.config = {
 
     reporters: ['cucumber', 'allure'],
 
+    allure: {
+        outputDir: './allure-results/',
+        disableWebdriverStepsReporting: false,
+        useCucumberStepReporter: false,
+    },
+
+
     cucumberOpts: {
         require: ['./test/features/**/*.js'], // <string[]> (file/dir) require files before executing features
         backtrace: false, // <boolean> show full backtrace for errors

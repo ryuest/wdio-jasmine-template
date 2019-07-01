@@ -1,6 +1,6 @@
 const { Given, When, Then } = require('cucumber')
 const { join } = require('path')
-const { screenshotPath } = require('../../../wdio.conf').config
+const { screenshotPath } = require('../../../wdio.chromedriverConf').config
 const getScreenshotPath = (name) => join(screenshotPath, `${browser.desiredCapabilities.browserName}.${name}.png`)
 
 Given('the search GitHub page loaded', {timeout: 70000}, async () => {
