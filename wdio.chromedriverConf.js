@@ -1,7 +1,7 @@
 exports.config = {
 
     specs: [
-       './test/specs/**/*.js'
+       './test/specs/**/dragAndDropSpec.js'
        //'./pageobject/specs/**/*.js' --->>> need to fix mocha import
     ],
     // Patterns to exclude.
@@ -53,7 +53,7 @@ exports.config = {
 
     //  services: ['devtools', 'applitools', 'appium', 'chromedriver', 'docker'],
 
-    framework: 'mocha',
+    framework: 'jasmine',
 
     reporters: ['allure'],
 

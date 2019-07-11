@@ -1,8 +1,9 @@
 exports.config = {
 
     specs: [
-        './test/features/**/*.feature'
-        //   './test/specs/**/*.js'
+        './test/features/**/dragAndDrop.feature'
+        // './test/features/**/*.feature'
+        // './test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -76,4 +77,14 @@ exports.config = {
         timeout: 20000, // <number> timeout for step definitions
         ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treat undefined definitions as warnings.
     },
+
+        before: function () {
+            /**
+             * Setup the Chai assertion framework
+             */
+            const chai = require('chai');
+            global.expect = chai.expect;
+            global.assert = chai.assert;
+            global.should = chai.should();
+        },
 }

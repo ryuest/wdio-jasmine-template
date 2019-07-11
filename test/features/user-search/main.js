@@ -10,15 +10,15 @@ Given('the search GitHub page loaded', {timeout: 70000}, async () => {
 
 When('I introduce my search keywords for an user in the search box', async () => {
   await browser.setValue('[name=q]', 'user:eridem\n')
-  await browser.saveScreenshot(getScreenshotPath('WHEN1'))
+//  await browser.saveScreenshot(getScreenshotPath('WHEN1'))
 })
 
 When('I press enter in the search box', async () => {
   await browser.click('span[data-search-type="Repositories"]')
-  await browser.saveScreenshot(getScreenshotPath('WHEN2'))
+//  await browser.saveScreenshot(getScreenshotPath('WHEN2'))
 })
 
 Then('I should obtain a list of repositories for that user', async () => {
   await browser.waitForExist('.repo-list')
-  await browser.saveScreenshot(getScreenshotPath('THEN'))
+//  await browser.saveScreenshot(getScreenshotPath('THEN'))
 })
