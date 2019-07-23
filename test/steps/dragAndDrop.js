@@ -1,12 +1,11 @@
 const { Given, When, Then } = require('cucumber')
 const { join } = require('path')
-const { screenshotPath } = require('../../../wdio.chromedriverConf').config
-const getScreenshotPath = (name) => join(screenshotPath, `${browser.desiredCapabilities.browserName}.${name}.png`)
 
 Given('the Localhost page loaded', {timeout: 70000}, () => {
+ console.log('HERE 0 ------>>>>>>>>>>> ')
    browser.url('/')
    browser.getTitle().should.equal('DEMO APP');
-   browser.saveScreenshot(getScreenshotPath('GIVEN Drag and Drop box'))
+ //  browser.saveScreenshot(getScreenshotPath('GIVEN Drag and Drop box'))
     let elem = $('#visible')
     let isExisting = elem.isExisting()
     console.log('HERE ------>>>>>>>>>>> ' + isExisting)

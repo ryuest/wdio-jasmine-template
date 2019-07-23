@@ -1,7 +1,8 @@
 exports.config = {
 
     specs: [
-        './test/features/**/dragAndDrop.feature'
+       // './test/features/**/dragAndDrop.feature'
+        './test/features/**/page.feature'
         // './test/features/**/*.feature'
         // './test/specs/**/*.js'
     ],
@@ -24,7 +25,7 @@ exports.config = {
     sync: true,
 
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'verbose',
+    logLevel: 'debug',
 
     // Enables colors for log output.
     coloredLogs: true,
@@ -52,7 +53,7 @@ exports.config = {
 
     framework: 'cucumber',
 
-    reporters: ['cucumber', 'allure'],
+    reporters: ['spec', 'allure'],
 
     allure: {
         outputDir: './allure-results/',
@@ -62,7 +63,7 @@ exports.config = {
 
 
     cucumberOpts: {
-        require: ['./test/features/**/*.js'], // <string[]> (file/dir) require files before executing features
+      //  require: ['./test/features/**/*.js'], // <string[]> (file/dir) require files before executing features
         backtrace: false, // <boolean> show full backtrace for errors
         compiler: [], // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         dryRun: false, // <boolean> invoke formatters without executing steps
@@ -76,6 +77,21 @@ exports.config = {
         tags: [], // <string[]> (expression) only execute the features or scenarios with tags matching the expression
         timeout: 20000, // <number> timeout for step definitions
         ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treat undefined definitions as warnings.
+        requireModule: [
+            '@babel/register'
+        ],
+
+        tagExpression: 'not @skip',
+
+        require: [
+            //'./test/steps/dragAndDrop.js',
+            './test/steps/given.js',
+            './test/steps/then.js',
+            './test/steps/when.js',
+            // Or search a (sub)folder for JS files with a wildcard
+            // works since version 1.1 of the wdio-cucumber-framework
+            // './src/**/*.js',
+        ],
     },
 
         before: function () {
