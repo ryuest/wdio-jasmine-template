@@ -4,13 +4,16 @@ import chai from 'chai';
 import Page from '../support/action/page';
 
 let expect = chai.expect;
+let page = new Page();
 
 
-Then(/^I click on (-?\d+) song with name "([^"]*)"$/, (number, keyword) => {
-    const links = $$('.ui.primary.button')[number];
-    links.click();
+Then(/^The page title is "([^"]*)"$/, keyword => {
+    page.getTitle().should.equal(keyword);
+});
+
+Then(/^(-?\d+) song have name "([^"]*)"$/, (number, keyword) => {
     let songMenuTitle = $('.eight').$$('.item')[number].$('div[class="content"]')
     expect(songMenuTitle.getText()).to.equal(keyword);
-    let selectedSongTitle = $$('.column.eight.wide')[number].$('p')
+    let selectedSongTitle = $$('.column.eight.wide')[1].$('p')
     expect(selectedSongTitle.getText()).to.include(keyword)
 });
