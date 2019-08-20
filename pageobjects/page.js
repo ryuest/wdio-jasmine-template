@@ -1,4 +1,4 @@
-export default class Page {
+class Page {
 
     goToUrl(url) {
         return browser.url(url);
@@ -12,3 +12,5 @@ export default class Page {
         return browser.getTitle();
     }
 }
+
+export default new Page()

@@ -2,7 +2,7 @@ exports.config = {
 
     specs: [
        // './test/features/**/dragAndDrop.feature'
-        './test/features/**/page.feature'
+        './test/features/**/searchElements.feature'
         // './test/features/**/*.feature'
         // './test/specs/**/*.js'
     ],
@@ -84,7 +84,7 @@ exports.config = {
         tagExpression: 'not @skip',
 
         require: [
-            //'./test/steps/dragAndDrop.js',
+           // '/Users/jboiko/git3/react-webpack-babel-template/test/steps/searchElements_steps.js',
             './test/steps/given.js',
             './test/steps/then.js',
             './test/steps/when.js',

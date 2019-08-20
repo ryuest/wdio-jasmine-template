@@ -1,12 +1,19 @@
 const { Given } = require('cucumber')
 
 import chai from 'chai';
-import Page from '../support/action/page';
+import Page from '../../pageobjects/page';
+import openWebsite from '/Users/jboiko/git3/react-webpack-babel-template/test/support/action/openWebsite';
 
 let expect = chai.expect;
-let page = new Page();
 
 Given('the Localhost page loaded', async () => {
-                return page.goHome();
+    return Page.goHome();
+})
 
+Given(/^I open the (url|site) "([^"]*)?"$/, async () => {
+    return Page.goToUrl(keyword);
+})
+
+Given(/^I open the (url|site) "([^"]*)?"$/, async () => {
+        return openWebsite
 })

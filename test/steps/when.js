@@ -1,13 +1,16 @@
 const { When } = require('cucumber')
 
 import chai from 'chai';
-import Page from '../support/action/page';
+import SongList from '../../pageobjects/songlist';
+import clickElement from '../support/action/clickElement';
 
 let expect = chai.expect;
-let page = new Page();
 
 
 When(/^I click on (-?\d+) song$/, number => {
-    let links = $$('.column.eight.wide')[0].$('.ui.divided.list').$$('.item')[number].$('.ui.button.primary')
-    links.click();    
+    SongList.selectSongButton(number).click();    
+});
+
+When(/^I (click|doubleclick) on the (link|button|element) "([^"]*)?"$/, (action, type, element) => {
+    clickElement(action, type, element)
 });
