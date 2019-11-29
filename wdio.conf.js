@@ -1,84 +1,73 @@
 exports.config = {
-    // Specify Test Files
+
     specs: [
-         './test/features/**/*.feature'
+       './test/specs/**/03-session.js'
+       //'./pageobject/specs/**/*.js' --->>> need to fix mocha import
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
     ],
-    // Capabilities
-    maxInstances: 10,
-        capabilities: [{
-            browserName: 'chrome',
-            chromeOptions: {
-                args: ['--headless', '--no-sandbox']
-            }
-        }],
-    //
-    // Test Configurations
+
+    maxInstances: 1,
+
+    capabilities: [{
+        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+        // grid with only 5 firefox instances available you can make sure that not more than
+        // 5 instances get started at a time.
+        maxInstances: 5,
+        //
+        browserName: 'chrome',
+        chromeOptions: {
+            'mobileEmulation': {
+              'deviceName': 'iPhone 8'
+            },
+          }
+    }],
+
+    logLevel: 'debug',
+
     sync: true,
-    //
+
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'command',
-    //
+    //logLevel: 'command',
+
     // Enables colors for log output.
     coloredLogs: true,
-    //
-    // Warns when a deprecated command is used
-    deprecationWarnings: true,
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
     bail: 0,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath: './output',
+    screenshotPath: './reports/',
     //
-    // Set a base URL in order to shorten url command calls.
-    baseUrl: 'http://localhost',
+    // Set a base URL in order to shorten url command calls. If your url parameter starts
+    // with "/", then the base url gets prepended.
+    baseUrl: 'https://webdriver.io/blog/2018/12/19/webdriverio-v5-released.html',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
-    //
-    // Default timeout in milliseconds for request
-    // if Selenium Grid doesn't send response
-    connectionRetryTimeout: 90000,
-    //
-    // Default request retries count
-    connectionRetryCount: 3,
-    //
-    // Selenium standalone
-    services: ['selenium-standalone'],
-    //
-    // Framework you want to run your specs with.
-    framework: 'cucumber',
 
-    reporters: ['cucumber', 'allure'],
+    services: ['chromedriver'],
+    port: 9515,
+    path: '/',
 
-    cucumberOpts: {
-        require: ['./test/features/**/*.js'], // <string[]> (file/dir) require files before executing features
-        backtrace: false, // <boolean> show full backtrace for errors
-        compiler: [], // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
-        dryRun: false, // <boolean> invoke formatters without executing steps
-        failFast: false, // <boolean> abort the run on first failure
-        format: ['pretty'], // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
-        colors: true, // <boolean> disable colors in formatter output
-        snippets: true, // <boolean> hide step definition snippets for pending steps
-        source: true, // <boolean> hide source uris
-        profile: [], // <string[]> (name) specify the profile to use
-        strict: false, // <boolean> fail if there are any undefined or pending steps
-        tags: [], // <string[]> (expression) only execute the features or scenarios with tags matching the expression
-        timeout: 20000, // <number> timeout for step definitions
-        ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treat undefined definitions as warnings.
-    },
-    // Output for jUnit
-    reporterOptions: {
-        junit: {
-            outputDir: './output/',
-            outputFileFormat: function (opts) { // optional
-                return `${opts.capabilities}.results-${opts.cid}.xml`
-            }
-        }
-    },
+    //  services: ['devtools', 'applitools', 'appium', 'chromedriver', 'docker'],
+
+    framework: 'jasmine',
+
+    reporters: ['allure'],
+
+     allure: {
+         outputDir: './allure-results/',
+         disableWebdriverStepsReporting: false,
+         useCucumberStepReporter: false,
+     },
+
+
+    mochaOpts: {
+        ui: 'bdd',
+        timeout: 60000
+    }
 }
